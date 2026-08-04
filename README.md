@@ -1,37 +1,27 @@
-# UC-03 : Edit Person Details
+# UC-04 : Delete a Person
 
-## What is UC-03?
+## What is UC-04?
 
-UC-03 allows the user to edit the details of an existing person.
-
-The person's **First Name** and **Last Name** cannot be changed.
+UC-04 allows the user to delete an existing person using the person's **name**.
 
 ---
 
 ## Why do we need this?
 
-Sometimes a person's information changes.
+Sometimes a person's information is no longer needed.
 
-For example:
-
-- Address
-- City
-- State
-- Zip Code
-- Phone Number
-- Email
-
-UC-03 allows the user to update these details.
+This use case allows the user to remove that person's details from the Address Book.
 
 ---
 
 ## What do we do in this use case?
 
 - Create a `Person` object.
-- Read person details from the console.
+- Enter person details.
 - Display the person's details.
-- Edit the person's information (except name).
-- Display the updated details.
+- Ask the user to enter the person's name.
+- If the name matches, delete the person.
+- Display a success message.
 
 ---
 
@@ -43,10 +33,10 @@ Stores the person's information.
 
 ### AddressBookMain.java
 
-- Reads input from the user.
+- Reads user input.
 - Creates a `Person` object.
-- Updates the person's details.
-- Displays the updated information.
+- Deletes the person using the person's name.
+- Displays the result.
 
 ---
 
@@ -59,9 +49,14 @@ Enter Details
       ↓
 Display Details
       ↓
-Edit Details
+Enter Person Name
       ↓
-Display Updated Details
+Name Found?
+   ↓        ↓
+ Yes       No
+ ↓          ↓
+Delete    Show Message
+Person
 ```
 
 ---
@@ -71,36 +66,25 @@ Display Updated Details
 ```text
 Enter First Name : Rahul
 Enter Last Name : Sharma
-Enter Address : MG Road
-Enter City : Bangalore
-Enter State : Karnataka
-Enter Zip : 560001
-Enter Phone : 9876543210
-Enter Email : rahul@gmail.com
 
 Person Created Successfully
 
-Do you want to edit details? (yes/no)
+Enter Name to Delete : Rahul
 
-yes
-
-Enter New Address : Indiranagar
-Enter New City : Bangalore
-Enter New State : Karnataka
-Enter New Zip : 560038
-Enter New Phone : 9999999999
-Enter New Email : rahul123@gmail.com
-
-Person Details Updated Successfully
+Person Deleted Successfully
 ```
 
 ---
 
 ## Learning
 
-- How to update object data.
-- How to use setter methods.
-- How to modify existing information.
-- How one object's data can change during program execution.
+- How to compare strings.
+- How to delete an object.
+- How to use `if` statements.
+- How one class uses another class.
 
 ---
+
+## Status
+
+✅ UC-04 Completed

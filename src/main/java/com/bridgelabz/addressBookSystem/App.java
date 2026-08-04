@@ -35,7 +35,7 @@ public class App {
         System.out.println(jyothish);
 
         System.out.print("Do you want to update? (y/n): ");
-        String choice = scanner.next();
+        String choice = scanner.nextLine();
 
         if(choice.equalsIgnoreCase("y")){
 
@@ -53,6 +53,19 @@ public class App {
 
             System.out.print("Enter Phone Number: ");
             jyothish.setPhoneNumber(scanner.nextLine());
+
+            System.out.println("\nUpdated Person:");
+            System.out.println(jyothish);
+
+        }
+
+        System.out.print("Do you want to Delete person ? (y/n): ");
+        String delete = scanner.nextLine();
+
+        if(delete.equalsIgnoreCase("y")){
+
+            jyothish = null;
+            System.out.println("Person deleted successfully.");
 
         }
 
