@@ -1,27 +1,37 @@
-# UC-02 : Add a New Person
+# UC-03 : Edit Person Details
 
-## What is UC-02?
+## What is UC-03?
 
-UC-02 is used to create a new **Person**.
+UC-03 allows the user to edit the details of an existing person.
 
-The user enters the person's details through the **console**, and the application creates a `Person` object.
+The person's **First Name** and **Last Name** cannot be changed.
 
 ---
 
 ## Why do we need this?
 
-To store a person's information in the Address Book.
+Sometimes a person's information changes.
 
-Before adding a person to the Address Book, we must first create a `Person` object.
+For example:
+
+- Address
+- City
+- State
+- Zip Code
+- Phone Number
+- Email
+
+UC-03 allows the user to update these details.
 
 ---
 
 ## What do we do in this use case?
 
-- Read person details from the console.
 - Create a `Person` object.
-- Store the entered details in the object.
+- Read person details from the console.
 - Display the person's details.
+- Edit the person's information (except name).
+- Display the updated details.
 
 ---
 
@@ -33,37 +43,64 @@ Stores the person's information.
 
 ### AddressBookMain.java
 
-- Takes input from the user.
+- Reads input from the user.
 - Creates a `Person` object.
-- Displays the person's details.
+- Updates the person's details.
+- Displays the updated information.
 
 ---
 
 ## Flow
 
 ```text
-User
-   ↓
+Create Person
+      ↓
 Enter Details
-   ↓
-Create Person Object
-   ↓
-Store Details
-   ↓
+      ↓
 Display Details
+      ↓
+Edit Details
+      ↓
+Display Updated Details
+```
+
+---
+
+## Sample Output
+
+```text
+Enter First Name : Rahul
+Enter Last Name : Sharma
+Enter Address : MG Road
+Enter City : Bangalore
+Enter State : Karnataka
+Enter Zip : 560001
+Enter Phone : 9876543210
+Enter Email : rahul@gmail.com
+
+Person Created Successfully
+
+Do you want to edit details? (yes/no)
+
+yes
+
+Enter New Address : Indiranagar
+Enter New City : Bangalore
+Enter New State : Karnataka
+Enter New Zip : 560038
+Enter New Phone : 9999999999
+Enter New Email : rahul123@gmail.com
+
+Person Details Updated Successfully
 ```
 
 ---
 
 ## Learning
 
-- How to use `Scanner`.
-- How to create an object.
-- How to store values in an object.
-- How one class uses another class.
+- How to update object data.
+- How to use setter methods.
+- How to modify existing information.
+- How one object's data can change during program execution.
 
 ---
-
-## Status
-
-✅ UC-02 Completed

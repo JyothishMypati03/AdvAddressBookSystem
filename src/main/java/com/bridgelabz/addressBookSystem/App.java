@@ -34,6 +34,28 @@ public class App {
 
         System.out.println(jyothish);
 
+        System.out.print("Do you want to update? (y/n): ");
+        String choice = scanner.next();
+
+        if(choice.equalsIgnoreCase("y")){
+
+            System.out.print("Enter Address: ");
+            jyothish.setAddress(scanner.nextLine());
+
+            System.out.print("Enter City: ");
+            jyothish.setCity(scanner.nextLine());
+
+            System.out.print("Enter State: ");
+            jyothish.setState(scanner.nextLine());
+
+            System.out.print("Enter Zip: ");
+            jyothish.setZip(scanner.nextLine());
+
+            System.out.print("Enter Phone Number: ");
+            jyothish.setPhoneNumber(scanner.nextLine());
+
+        }
+
     }
 
 }
